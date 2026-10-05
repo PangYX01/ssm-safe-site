@@ -296,7 +296,7 @@ footer a:hover{text-decoration:none;border-bottom-color:rgba(255,255,255,.9)}
 <div class="fb">
 <form id="f" novalidate>
 <label for="rn">SSM Business Registration Number</label>
-<input type="text" id="rn" name="rn" autocomplete="off" inputmode="text" maxlength="12" placeholder="e.g. 201903123456 / 123456789" aria-describedby="rh re">
+<input type="text" id="rn" name="rn" autocomplete="off" inputmode="text" maxlength="12" placeholder="e.g. 201903123456 / 123456789" aria-describedby="rh re" oninput="this.value = this.value.toUpperCase()">
 <p class="help" id="rh">This lookup does not provide an expiry date or determine whether an expiry was within the last 12 months. An unavailable result does not mean your business is unregistered. <a href="#privacy">How your lookup is handled</a>.</p>
 <p class="err" id="re" role="alert"></p>
 </form>
