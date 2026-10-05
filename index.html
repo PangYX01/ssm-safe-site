@@ -8,6 +8,8 @@
 <meta property="og:title" content="SSM Jelas – Everything You Need to Know About SSM">
 <meta property="og:description" content="SSM information made simple for Malaysian business owners.">
 <meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232197F9'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial,sans-serif' font-size='44' font-weight='bold' fill='white'%3EJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -52,7 +54,7 @@ header.solid nav a.btn{color:#fff;background:var(--action);border-color:var(--ac
 header.solid #mb{color:var(--ink)}
 @media(max-width:980px){#mb{display:grid}nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy);padding:8px 16px 18px}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}nav a,header.solid nav a{color:#fff;padding:14px 8px;font-size:1.05rem}nav a.btn,header.solid nav a.btn{margin:10px 0 0;justify-content:center;color:#000;background:#fff;border-color:#fff}header.open{background:var(--navy)}header.open .logo,header.open #mb{color:#fff}}
 /* hero */
-.hero{position:relative;background:linear-gradient(180deg,#0A2342,#071A33 70%);color:#fff;padding:140px 0 88px;overflow:hidden}
+.hero{position:relative;background-image:url(img/background.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;color:#fff;padding:140px 0 88px;overflow:hidden}
 .hero svg.sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:60%;fill:#fff;opacity:.07}
 .hero .w{position:relative}
 .hero h1{color:#fff;max-width:16ch}
@@ -66,6 +68,16 @@ header.solid #mb{color:var(--ink)}
 .c{background:var(--card);border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh)}
 .c p{color:var(--label);font-size:.97rem}.c p:last-child{margin:0}
 .c.st{border-top:5px solid}.st.ok{border-color:var(--ok)}.st.wa{border-color:var(--wa)}.st.er{border-color:var(--er)}
+#renewal .sub{text-wrap:balance}
+#renewal .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5);position:relative;margin-top:var(--sp-7)}
+#renewal .tl:before{content:"";position:absolute;top:11px;left:0;right:0;height:2px;background:#C5D0DE}
+#renewal .tl-i{position:relative;padding-top:40px}
+#renewal .tl-i:before{content:"";position:absolute;top:0;left:0;width:24px;height:24px;border-radius:50%;background:var(--k);border:5px solid var(--sec);box-sizing:border-box;box-shadow:0 0 0 2px var(--k)}
+#renewal .tl-i.ok{--k:var(--ok)}#renewal .tl-i.wa{--k:var(--wa)}#renewal .tl-i.er{--k:var(--er)}
+#renewal .tl-i h3{margin-bottom:.35em}#renewal .tl-i p{color:var(--label);margin:0;max-width:34ch}
+#renewal .rp{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:var(--sp-7) auto 0;padding:16px 24px;max-width:max-content;background:var(--card);border-radius:999px;box-shadow:var(--sh);color:var(--label);text-align:center}
+#renewal .rp b{color:var(--brand-strong)}
+@media(max-width:640px){#renewal .tl{grid-template-columns:1fr}#renewal .tl:before{display:none}#renewal .rp{border-radius:var(--r-lg)}}
 .note{background:var(--tint);border-radius:var(--r-md);padding:16px 20px;color:var(--label);margin:var(--sp-5) auto 0;max-width:80ch}
 .lk{display:inline-flex;align-items:center;gap:6px;font-weight:600;margin-top:12px}
 /* stat strip */
@@ -158,6 +170,74 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 @media(max-width:685px){.ssm-business-section{padding:18px 20px}.ssm-business-name{font-size:22px}.ssm-card-body{padding:20px}.ssm-info-grid{grid-template-columns:1fr}.ssm-info-label{min-height:0}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* ===== UI polish: "Practical SSM Guidance" onward (styling only) ===== */
+#practical-guide{background:linear-gradient(180deg,#EAF4FE,#F3F9FE);border-block:1px solid #D5E7F8}
+#practical-guide h2,#faq h2,#official h2{position:relative;padding-bottom:20px;margin-bottom:.5em}
+#practical-guide h2:after,#faq h2:after,#official h2:after{content:"";position:absolute;left:50%;bottom:0;width:56px;height:4px;border-radius:4px;background:var(--brand);transform:translateX(-50%)}
+#practical-guide .sub{margin-bottom:var(--sp-6)}
+.pg,.of{display:flex;flex-direction:column;border:1px solid #DCE8F4;padding:28px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.pg:hover,.of:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(7,26,51,.12);border-color:#B7D6F4}
+.pgi{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--tint);color:var(--brand-strong);margin-bottom:18px}
+.pgi .ic{width:26px;height:26px}
+.pg h3,.of h3{font-size:1.2rem;margin-bottom:.5em}
+.pg p,.of p{flex:1 1 auto;line-height:1.7}
+.pg .lk{justify-content:space-between;margin-top:22px;padding-top:16px;border-top:1px solid var(--bd);text-decoration:none;color:var(--brand-strong)}
+.pg .lk:hover{text-decoration:underline}
+.pg .lk .ic,.of .lk .ic{transition:transform .2s ease}
+.pg .lk:hover .ic,.of .lk:hover .ic{transform:translate(2px,-2px)}
+#practical-guide .note{display:flex;gap:12px;align-items:flex-start;max-width:none;margin-top:32px;background:#fff;border:1px solid #CFE3F6;border-left:5px solid var(--brand);font-size:.95rem}
+/* faq */
+#faq{background:var(--sec)}
+.fq{max-width:900px;padding:12px 16px;border:1px solid #DCE8F4;box-shadow:0 6px 24px rgba(7,26,51,.06)}
+.fq button{padding:18px 16px;border-radius:0;transition:background .15s ease}
+.fq button:hover{background:var(--subtle)}
+.fq h3:last-of-type button{border-bottom:0}
+.fq button .ic{width:34px;height:34px;padding:8px;border-radius:50%;background:var(--sec);color:var(--brand-strong);transition:transform .2s ease,background .2s ease,color .2s ease}
+.fq button[aria-expanded=true]{background:var(--tint);color:var(--navy);border-bottom-color:transparent;border-radius:var(--r-md) var(--r-md) 0 0}
+.fq button[aria-expanded=true] .ic{background:var(--brand-strong);color:#fff}
+.fq .a{background:var(--tint);padding:0 64px 22px 16px;margin-bottom:6px;border-radius:0 0 var(--r-md) var(--r-md);line-height:1.75}
+.fq button{border-bottom:0}
+.fq .a+h3{border-top:1px solid var(--bd)}
+.fq .a:not([hidden])+h3{border-top-color:transparent}
+.fq h3:has(button[aria-expanded=true]){border-top-color:transparent}
+@media(max-width:560px){.fq{padding:8px}.fq .a{padding-right:16px}}
+/* official */
+.of .lk{justify-content:center;min-height:48px;margin-top:24px;padding:0 18px;border:2px solid var(--brand-strong);border-radius:var(--r-sm);text-decoration:none;transition:background .15s ease,color .15s ease}
+.of .lk:hover{background:var(--brand-strong);color:#fff}
+/* disclaimer + privacy */
+#disclaimer{padding-bottom:14px}#privacy{padding-top:14px}
+.dis{max-width:1000px;display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;align-items:start;padding:32px 36px;border:1px solid #D5E3F1;border-left:6px solid var(--brand);box-shadow:var(--sh)}
+.dis h2{grid-column:1/-1;display:flex;align-items:center;gap:14px;font-size:1.4rem;margin:0 0 6px}
+.dis h2:before{content:"";flex:none;width:46px;height:46px;border-radius:12px;background-color:var(--tint);background-position:center;background-repeat:no-repeat;background-size:24px}
+#disclaimer .dis h2:before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2024%2024%27%20fill=%27none%27%20stroke=%27%230B6FD1%27%20stroke-width=%272%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%3E%3Ccircle%20cx=%2712%27%20cy=%2712%27%20r=%2710%27/%3E%3Cpath%20d=%27M12%2011v5M12%208v.01%27/%3E%3C/svg%3E")}
+#privacy .dis{border-left-color:var(--navy)}
+#privacy .dis h2:before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2024%2024%27%20fill=%27none%27%20stroke=%27%230B6FD1%27%20stroke-width=%272%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%3E%3Crect%20x=%275%27%20y=%2711%27%20width=%2714%27%20height=%279%27%20rx=%272%27/%3E%3Cpath%20d=%27M8%2011V8a4%204%200%200%201%208%200v3%27/%3E%3C/svg%3E")}
+.dis p{margin:0;font-size:.97rem;line-height:1.75}
+@media(max-width:760px){.dis{grid-template-columns:1fr;padding:24px 20px}}
+/* footer */
+footer{background:linear-gradient(180deg,#2197F9,#1C86E6);padding:64px 0 28px}
+.fg{gap:44px}
+footer .logo{font-size:1.35rem;margin-bottom:16px}
+footer .fg>div:first-child p{max-width:36ch;line-height:1.7;opacity:.96}
+footer h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;opacity:.9}
+footer li a{padding:7px 0;font-size:1rem;border-bottom:1px solid transparent;transition:border-color .15s ease}
+footer a:hover{text-decoration:none;border-bottom-color:rgba(255,255,255,.9)}
+.fn{margin-top:44px;border-top-color:rgba(255,255,255,.4);font-size:.9rem;line-height:1.6}
+
+/* fine-print strip: disclaimer + privacy (styling only) */
+.fine{max-width:var(--cw);margin:0 auto;padding:0 25px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #D5DAE0}
+.fine .w{padding:0;max-width:none}
+.fine #disclaimer,.fine #privacy{padding:44px 0 48px;background:none}
+.fine #disclaimer{padding-right:48px;border-right:1px solid #D5DAE0}
+.fine #privacy{padding-left:48px}
+.fine .dis{display:block;max-width:none;padding:0;margin:0;border:0;border-radius:0;background:none;box-shadow:none}
+.fine .dis h2{display:flex;align-items:center;gap:12px;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin:0 0 16px}
+.fine .dis h2:before{width:32px;height:32px;border-radius:50%;background-size:16px}
+.fine .dis p{font-size:.875rem;line-height:1.75;color:#475569;margin:0 0 .8em}
+.fine .dis p:last-child{margin:0}
+.fine .dis a{color:var(--brand-strong)}
+@media(max-width:860px){.fine{grid-template-columns:1fr;padding:0 16px}.fine #disclaimer{padding:36px 0 28px;border-right:0;border-bottom:1px solid #D5DAE0}.fine #privacy{padding:28px 0 40px}}
 </style>
 </head>
 <body>
@@ -174,6 +254,11 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <symbol id="be" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></symbol>
 <symbol id="dc" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></symbol>
 <symbol id="bk" viewBox="0 0 24 24"><path d="M4 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-6"/><path d="M20 5v13h-6"/></symbol>
+<symbol id="u" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+<symbol id="dl" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></symbol>
+<symbol id="lic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h4M16 12h2"/></symbol>
+<symbol id="bd" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></symbol>
+<symbol id="ky" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/></symbol>
 </defs></svg>
 
 <header id="hd">
@@ -212,7 +297,7 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <form id="f" novalidate>
 <label for="rn">SSM Business Registration Number</label>
 <input type="text" id="rn" name="rn" autocomplete="off" inputmode="text" maxlength="12" placeholder="e.g. 201903123456 / 123456789" aria-describedby="rh re">
-<p class="help" id="rh">Enter your registration number. We will check automatically when you finish typing.</p>
+<p class="help" id="rh">This lookup does not provide an expiry date or determine whether an expiry was within the last 12 months. An unavailable result does not mean your business is unregistered. <a href="#privacy">How your lookup is handled</a>.</p>
 <p class="err" id="re" role="alert"></p>
 </form>
 <div id="res" aria-live="polite" tabindex="-1"></div>
@@ -226,7 +311,7 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <div class="w"><div class="strip">
 <div><svg class="ic"><use href="#sh"/></svg>Independent<small>Not SSM or government</small></div>
 <div><svg class="ic"><use href="#bk"/></svg>Plain language<small>Explained simply</small></div>
-<div><svg class="ic"><use href="#dc"/></svg>No forms or payments<small>Information only</small></div>
+<div><svg class="ic"><use href="#dc"/></svg>No renewal applications or payments<small>Information only</small></div>
 <div><svg class="ic"><use href="#ex"/></svg>Official links<small>For real transactions</small></div>
 </div></div>
 </section>
@@ -278,15 +363,14 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <section id="renewal">
 <div class="w">
 <h2>What is SSM Renewal?</h2>
-<p class="sub">SSM business renewal means extending the validity period of an eligible registered business. It applies to sole proprietorships and partnerships. Companies and LLPs follow different requirements, so check with SSM.</p>
-<ol class="tl">
-<li class="t1"><b><svg class="ic"><use href="#ok"/></svg>Active</b><span>The registration has not reached its expiry date.</span></li>
-<li class="t2"><b><svg class="ic"><use href="#ck"/></svg>Approaching expiry</b><span>The expiry date is close. A good time to check.</span></li>
-<li class="t3"><b><svg class="ic"><use href="#wa"/></svg>Expired</b><span>Expired, but within 12 months of the expiry date.</span></li>
-<li class="t4"><b><svg class="ic"><use href="#er"/></svg>Expired over 12 months</b><span>Normal renewal is no longer available.</span></li>
-</ol>
-<ul class="bul"><li>Eligible registrations may be renewed before expiry.</li><li>Renewal may remain possible for up to 12 months after expiry, subject to current SSM rules.</li><li>Renewal periods are one to five years, depending on current requirements.</li><li>Beyond the permitted period, another process (such as registering again) may be required.</li></ul>
-
+<p class="sub">SSM business renewal extends the validity period of an eligible registered business, so it stays on record with SSM.</p>
+<div class="tl">
+<div class="tl-i ok"><h3>Before expiry</h3><p>Eligible registrations may be renewed before they expire.</p></div>
+<div class="tl-i wa"><h3>After expiry</h3><p>Renewal may remain possible for up to 12 months after expiry, subject to current SSM rules.</p></div>
+<div class="tl-i er"><h3>Beyond the permitted period</h3><p>Another process, such as registering again, may be required.</p></div>
+</div>
+<p class="rp"><span><b>Renewal period:</b> one to five years, depending on current requirements.</span></p>
+<p class="note"><b>Who this applies to:</b> sole proprietorships and partnerships. Companies and LLPs follow different requirements, so check with SSM.</p>
 </div>
 </section>
 
@@ -300,7 +384,7 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 
 <section id="expiry">
 <div class="w">
-<h2>What Happens When Your SSM Expires?</h2>
+<h2>Understanding Your SSM Registration Status</h2>
 <div class="g g3" style="margin-top:var(--sp-6)">
 <div class="c st ok"><h3>ACTIVE</h3><p>The registration has not reached its expiry date.</p></div>
 <div class="c st wa"><h3>EXPIRED</h3><p>The registration may still be within the applicable post-expiry renewal period, subject to current SSM requirements.</p></div>
@@ -324,6 +408,22 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 </div>
 </section>
 
+<section id="practical-guide">
+<div class="w">
+<h2>Practical SSM Guidance</h2>
+<p class="sub">Understand the official process and the documents you may need.</p>
+<div class="g g3">
+<div class="c pg"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#u"/></svg></span><h3>Who Can Use EzBiz?</h3><p>Owners must be Malaysian citizens or permanent residents aged 18 or above. All business owners and partners must register and verify their EzBiz user accounts. SSM's current guidance directs users through the SSM4U portal.</p><a class="lk" href="https://ssm.com.my/Pages/Services/Registration-of-Business-%28ROB%29/EzBiz-Online.aspx" target="_blank" rel="noopener noreferrer">Official EzBiz Access &amp; Eligibility <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c pg"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#dl"/></svg></span><h3>Download or Replace Documents</h3><p>Business owners can download their certificate and business information, if purchased, from EzBiz within 90 days after approval. After that period, copies may be purchased through the service providers listed by SSM. Obtaining a copy does not renew the registration.</p><a class="lk" href="https://ssm.com.my/Pages/Services/Registration-of-Business-%28ROB%29/EzBiz-Online.aspx" target="_blank" rel="noopener noreferrer">Official Download Guidance <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c pg"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#dc"/></svg></span><h3>Certificate or Business Profile?</h3><p>A business registration certificate records the registration. A business profile provides registered particulars about the business. Choose the document requested by the organisation you are dealing with; a website lookup is not a replacement for an official document.</p><a class="lk" href="https://www.ssm.com.my/Pages/Product/Business-Information.aspx" target="_blank" rel="noopener noreferrer">SSM Document Information <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c pg"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#sh"/></svg></span><h3>What Is Digital CTC?</h3><p>A Digital Certified True Copy (DCTC) is a digitally certified document. SSM provides a DCTC reader and web checker to verify document authenticity. Our registration-status checker does not authenticate certificates.</p><a class="lk" href="https://www.ssm.com.my/Pages/Quick_Link_backup/DCTC-Reader-%26-Checker.aspx" target="_blank" rel="noopener noreferrer">Official DCTC Verification <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c pg"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#lic"/></svg></span><h3>Registration and Other Licences</h3><p>SSM registration does not replace licences, permits or approvals required by a local authority or another relevant agency. Requirements depend on your business activity and location.</p><a class="lk" href="https://www.ssm.com.my/Documents/Ezbiz%20Online%20User%20Guideline/GUIDELINE-FOR-REGISTRATION-OF-NEW-BUSINESS.pdf" target="_blank" rel="noopener noreferrer">SSM Registration Guideline (PDF) <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c pg"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#ck"/></svg></span><h3>Late Renewal and Compounds</h3><p>Late renewal can involve a compound in addition to renewal fees. Check any outstanding amount through official SSM services. Do not assume that registering a business again clears obligations connected with an earlier registration.</p><a class="lk" href="https://ssm.com.my/Pages/Services/Registration-of-Business-%28ROB%29/EzBiz-Online.aspx" target="_blank" rel="noopener noreferrer">Official Compound Services <svg class="ic"><use href="#ex"/></svg></a></div>
+</div>
+<p class="note">Official information checked on 5 October 2026. Requirements and access routes may change; follow the linked SSM guidance for the latest details.</p>
+</div>
+</section>
+
 <section id="faq">
 <div class="w"><h2>Frequently Asked Questions</h2><div class="fq" id="fq" style="margin-top:var(--sp-6)"></div></div>
 </section>
@@ -333,21 +433,31 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <h2>Need an Official SSM Service?</h2>
 <p class="sub">This website helps you understand SSM-related information. For official registration, renewal, business information, changes, termination, compounds or other official transactions, use the appropriate official SSM channels.</p>
 <div class="g g3">
-<div class="c" style="background:var(--subtle)"><h3>Suruhanjaya Syarikat Malaysia</h3><p>Official SSM website.</p><a class="lk" href="https://www.ssm.com.my" target="_blank" rel="noopener noreferrer">Official SSM Website <svg class="ic"><use href="#ex"/></svg></a></div>
-<div class="c" style="background:var(--subtle)"><h3>EzBiz Online</h3><p>Official online business services.</p><a class="lk" href="https://ezbiz.ssm.com.my" target="_blank" rel="noopener noreferrer">EzBiz Online <svg class="ic"><use href="#ex"/></svg></a></div>
-<div class="c" style="background:var(--subtle)"><h3>Business Information</h3><p>Official and authorised business-information channels are listed on the SSM website.</p><a class="lk" href="https://www.ssm.com.my" target="_blank" rel="noopener noreferrer">Find on SSM Website <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c of"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#bd"/></svg></span><h3>Suruhanjaya Syarikat Malaysia</h3><p>Official SSM website.</p><a class="lk" href="https://www.ssm.com.my" target="_blank" rel="noopener noreferrer">Official SSM Website <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c of"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#ky"/></svg></span><h3>EzBiz Online / SSM4U</h3><p>SSM's current EzBiz guidance directs users through SSM4U. Follow the official access instructions.</p><a class="lk" href="https://ssm.com.my/Pages/Services/Registration-of-Business-%28ROB%29/EzBiz-Online.aspx" target="_blank" rel="noopener noreferrer">Official EzBiz Access Guide <svg class="ic"><use href="#ex"/></svg></a></div>
+<div class="c of"><span class="pgi" aria-hidden="true"><svg class="ic"><use href="#dc"/></svg></span><h3>Business Information</h3><p>Official and authorised business-information channels are listed on the SSM website.</p><a class="lk" href="https://www.ssm.com.my" target="_blank" rel="noopener noreferrer">Find on SSM Website <svg class="ic"><use href="#ex"/></svg></a></div>
 </div>
 </div>
 </section>
 
+<div class="fine">
 <section id="disclaimer">
 <div class="w"><div class="dis">
 <h2>Independent Information Website</h2>
+<p>This independent information website is published under the name SSM Jelas. To report incorrect information or ask about this website or its handling of lookup information, email <a href="mailto:contact@ssmjelas.com">contact@ssmjelas.com</a>.</p>
 <p>This website provides general educational information about Suruhanjaya Syarikat Malaysia (SSM), business registration, renewal, expiry and related matters.</p>
 <p>We are not Suruhanjaya Syarikat Malaysia (SSM), are not a Malaysian government agency, and are not affiliated with or endorsed by SSM.</p>
 <p>Information may change over time. For official requirements, fees, business status information and transactions, always verify the latest information through official SSM channels.</p>
 </div></div>
 </section>
+<section id="privacy">
+<div class="w"><div class="dis">
+<h2>Privacy and the Status Checker</h2>
+<p>When automatic checking starts, the registration number you enter is sent to this site's hosted lookup service and then to the public SSM e-Search service to retrieve available business details. The checker does not ask for your identity-card number, password or payment details.</p>
+<p>The checker code does not save lookup results to a database. Hosting providers and external services may process technical request information, such as IP addresses and diagnostic logs, under their own policies. This notice does not promise that those services keep no logs.</p>
+</div></div>
+</section>
+</div>
 </main>
 
 <footer>
@@ -356,7 +466,7 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <div><a class="logo" href="#top"><i aria-hidden="true">J</i>SSM Jelas</a><p>Independent SSM information resource. Not affiliated with Suruhanjaya Syarikat Malaysia or the Malaysian Government.</p></div>
 <div><h3>Learn</h3><ul><li><a href="#what">What is SSM?</a></li><li><a href="#types">Business Types</a></li><li><a href="#renewal">SSM Renewal</a></li><li><a href="#expiry">SSM Expiry</a></li><li><a href="#faq">FAQ</a></li></ul></div>
 <div><h3>Resources</h3><ul><li><a href="#official">Official SSM Services</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-<div><h3>Website</h3><ul><li><a href="#disclaimer">Disclaimer</a></li></ul></div>
+<div><h3>Website</h3><ul><li><a href="#disclaimer">Disclaimer</a></li><li><a href="#privacy">Privacy &amp; Lookup Information</a></li></ul></div>
 </div>
 <p class="fn">Copyright © 2026 SSM Jelas. Independent SSM information resource. Not affiliated with Suruhanjaya Syarikat Malaysia or the Malaysian Government.</p>
 </div>
@@ -449,7 +559,7 @@ var Q=[["What does SSM stand for?","SSM stands for Suruhanjaya Syarikat Malaysia
 ["Is SSM the same as a business registration?","No. SSM is the statutory body. A business registration is one of the registrations administered through SSM."],
 ["What is an SSM registration number?","It is the unique number associated with a registered business. You can find it on your business registration information."],
 ["How do I check my SSM status?","Enter a valid SSM business registration number in the checker. The check starts automatically after you finish typing."],
-["Does this website connect directly to SSM?","The checker uses a server-side PHP lookup based on the supplied SSM validation logic to query the public SSM e-Search page. The source does not provide an expiry date."],
+["Does this website connect directly to SSM?","The checker uses a server-side lookup to query the public SSM e-Search page. The source does not provide an expiry date. An unavailable result does not mean a business is unregistered."],
 ["What is an SSM expiry date?","It marks the end of the current validity period of a registration that must be renewed."],
 ["Can SSM be renewed before expiry?","Eligible business registrations may generally be renewed before expiry, subject to current SSM rules."],
 ["Can an expired SSM still be renewed?","SSM currently allows renewal of eligible businesses up to 12 months after expiry. Verify the latest rules with SSM."],
