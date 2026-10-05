@@ -1,13 +1,23 @@
-# SSM Jelas standalone autocheck
+# SSM Jelas — Vercel version
 
-This package uses the `ssm-jelas-v3.html` design as `index.html` and preserves the standalone PHP SSM lookup.
+This package is the Vercel-ready version of the standalone SSM Jelas v3 checker.
 
 ## Files
-- `index.html` — v3 page with automatic SSM number checking; no Check Status button.
-- `ssm-jelas-status.php` — same-origin JSON endpoint used by the page.
-- `ssm-jelas-lookup.php` — standalone SSM lookup logic derived from the One Stop SSM plugin validation flow.
+- `index.html` — current v3 frontend with automatic SSM number checking.
+- `api/ssm-status.js` — Vercel Node.js serverless API that performs the SSM e-Search lookup.
+- `package.json` — installs the HTML parser used by the serverless function.
+- `vercel.json` — gives the lookup function enough execution time for the SSM request/canary flow.
 
-## Hosting requirement
-This is **not a file-only HTML package**. Upload all files to a web host that executes PHP and has PHP cURL + DOM enabled. Opening `index.html` directly with `file://`, or serving it from a static-only host, cannot execute `ssm-jelas-status.php` and the checker will show unavailable.
+## Deploy
+1. Put these files in the root of your GitHub repository.
+2. Push/commit to GitHub.
+3. Import or redeploy the repository in Vercel.
+4. Vercel will run `npm install` automatically and expose the checker endpoint at `/api/ssm-status`.
 
-The input uses the same accepted SSM number formats as the plugin: 12 digits, or old 9-character formats (`123456789`, `A12345678`, `AB1234567`) with an optional suffix such as `-H`. Checks are debounced and start automatically after typing stops.
+No PHP is required in this version.
+
+## Accepted SSM number formats
+The same formats used by the existing One Stop validation flow are retained: 12 digits, or old 9-character formats (`123456789`, `A12345678`, `AB1234567`) with an optional suffix such as `-H`.
+
+## Important
+The lookup depends on the external SSM e-Search page continuing to accept server-side requests and retaining its current HTML/form structure. If SSM changes or blocks requests from Vercel infrastructure, the checker will return `unavailable` and the API will need to be adjusted.

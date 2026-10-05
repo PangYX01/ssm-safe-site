@@ -365,7 +365,7 @@ footer .logo{color:#fff;margin-bottom:12px}footer .logo i{background:#fff;color:
 <script>
 (function(){
 /* ---------- config ---------- */
-var CONFIG={endpoint:'./ssm-jelas-status.php'};
+var CONFIG={endpoint:'/api/ssm-status'};
 /* ---------- API service ---------- */
 var StatusService={check:function(n,controller){var timer=setTimeout(function(){controller.abort()},20000);
  return fetch(CONFIG.endpoint,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({number:n}),signal:controller.signal})

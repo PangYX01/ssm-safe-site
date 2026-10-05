@@ -1,0 +1,11 @@
+{
+  "name": "ssm-jelas-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0"
+  }
+}

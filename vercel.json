@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/ssm-status.js": {
+      "maxDuration": 60
+    }
+  }
+}
